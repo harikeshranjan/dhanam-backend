@@ -24,6 +24,10 @@ app.use("/", apiLimiter);
 
 app.set("trust proxy", 1);
 
+app.get("/", (req, res) => {
+  res.send("Dhanam Backend is running");
+});
+
 app.use("/budgets", budgetRoutes);
 app.use("/categories", categoryRoutes);
 app.use("/expenses", expensesRoutes);
