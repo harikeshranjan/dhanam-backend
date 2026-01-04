@@ -24,6 +24,9 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use(error_middleware_1.globalErrorHandler);
 app.use("/", ratelimiter_1.apiLimiter);
 app.set("trust proxy", 1);
+app.get("/", (req, res) => {
+    res.send("Dhanam Backend is running");
+});
 app.use("/budgets", budget_routes_1.default);
 app.use("/categories", category_routes_1.default);
 app.use("/expenses", expense_routes_1.default);
