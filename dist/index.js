@@ -9,4 +9,4 @@ const db_1 = require("./config/db");
 // app.listen(env.PORT, () => {
 //   console.log(`Server running on port: ${env.PORT}`);
 // });
-exports.default = app_1.default;
+module.exports = app_1.default;
